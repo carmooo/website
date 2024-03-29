@@ -1,5 +1,7 @@
 package layout
 
+import "website/view/component"
+
 templ App(nav bool) {
     <!DOCTYPE html>
     	<html lang="en" data-theme="dark">
@@ -15,7 +17,7 @@ templ App(nav bool) {
     		</head>
     		<body class="antialiased">
     			if nav {
-    				navigation
+    				@component.Navigation()
     			}
     			{ children... }
     		</body>
