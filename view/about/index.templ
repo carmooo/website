@@ -1,68 +1,41 @@
 package about
 
-import "website/view/layout"
-
 templ Index() {
-    @layout.App(true) {
-        <ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
-          <li>
-            <div class="timeline-middle">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+    <div id="about" class="section min-h-screen bg-gray-100 flex justify-center items-center">
+      <div class="max-w-6xl mx-auto grid grid-cols-2 gap-8">
+        <div class="col-span-1">
+          <div class="max-w-sm mx-auto">
+            <h2 class="text-4xl font-bold mb-4">About Me</h2>
+            <p class="text-lg mb-4">My name is João and I'm a fat software engineer. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempor justo eu metus fringilla, eget dapibus nisl ultrices.</p>
+            <div class="mb-4">
+              <p class="font-semibold mb-2">Connect with me:</p>
+              <ul class="flex">
+                <li class="mr-4"><a href="#" class="text-blue-500 hover:text-blue-700">Twitter</a></li>
+                <li class="mr-4"><a href="#" class="text-blue-500 hover:text-blue-700">LinkedIn</a></li>
+                <li><a href="#" class="text-blue-500 hover:text-blue-700">GitHub</a></li>
+              </ul>
             </div>
-            <div class="timeline-start md:text-end mb-10">
-              <time class="font-mono italic">1984</time>
-              <div class="text-lg font-black">First Macintosh computer</div>
-              The Apple Macintosh—later rebranded as the Macintosh 128K—is the original Apple Macintosh personal computer. It played a pivotal role in establishing desktop publishing as a general office function. The motherboard, a 9 in (23 cm) CRT monitor, and a floppy drive were housed in a beige case with integrated carrying handle; it came with a keyboard and single-button mouse.
+          </div>
+        </div>
+        <div class="col-span-1 overflow-y-auto">
+          <h2 class="text-3xl font-bold mb-4">Work Experience</h2>
+          <div class="max-h-full overflow-y-auto">
+            <div class="timeline-item mb-4">
+              <div class="timeline-dot bg-blue-500"></div>
+              <div class="timeline-content bg-gray-200 p-4">
+                <h3 class="text-lg font-semibold mb-2">Event 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempor justo eu metus fringilla.</p>
+              </div>
             </div>
-            <hr/>
-          </li>
-          <li>
-            <hr />
-            <div class="timeline-middle">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+            <div class="timeline-item mb-4">
+              <div class="timeline-dot bg-blue-500"></div>
+              <div class="timeline-content bg-gray-200 p-4">
+                <h3 class="text-lg font-semibold mb-2">Event 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempor justo eu metus fringilla.</p>
+              </div>
             </div>
-            <div class="timeline-end mb-10">
-              <time class="font-mono italic">1998</time>
-              <div class="text-lg font-black">iMac</div>
-              iMac is a family of all-in-one Mac desktop computers designed and built by Apple Inc. It has been the primary part of Apple's consumer desktop offerings since its debut in August 1998, and has evolved through seven distinct forms
-            </div>
-            <hr />
-          </li>
-          <li>
-            <hr />
-            <div class="timeline-middle">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
-            </div>
-            <div class="timeline-start md:text-end mb-10">
-              <time class="font-mono italic">2001</time>
-              <div class="text-lg font-black">iPod</div>
-              The iPod is a discontinued series of portable media players and multi-purpose mobile devices designed and marketed by Apple Inc. The first version was released on October 23, 2001, about 8+1⁄2 months after the Macintosh version of iTunes was released. Apple sold an estimated 450 million iPod products as of 2022. Apple discontinued the iPod product line on May 10, 2022. At over 20 years, the iPod brand is the oldest to be discontinued by Apple
-            </div>
-            <hr />
-          </li>
-          <li>
-            <hr />
-            <div class="timeline-middle">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
-            </div>
-            <div class="timeline-end mb-10">
-              <time class="font-mono italic">2007</time>
-              <div class="text-lg font-black">iPhone</div>
-              iPhone is a line of smartphones produced by Apple Inc. that use Apple's own iOS mobile operating system. The first-generation iPhone was announced by then-Apple CEO Steve Jobs on January 9, 2007. Since then, Apple has annually released new iPhone models and iOS updates. As of November 1, 2018, more than 2.2 billion iPhones had been sold. As of 2022, the iPhone accounts for 15.6% of global smartphone market share
-            </div>
-            <hr />
-          </li>
-          <li>
-            <hr />
-            <div class="timeline-middle">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
-            </div>
-            <div class="timeline-start md:text-end mb-10">
-              <time class="font-mono italic">2015</time>
-              <div class="text-lg font-black">Apple Watch</div>
-              The Apple Watch is a line of smartwatches produced by Apple Inc. It incorporates fitness tracking, health-oriented capabilities, and wireless telecommunication, and integrates with iOS and other Apple products and services
-            </div>
-          </li>
-        </ul>
-    }
+          </div>
+        </div>
+      </div>
+    </div>
 }

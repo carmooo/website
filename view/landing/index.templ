@@ -1,6 +1,9 @@
 package landing
 
-import "website/view/layout"
+import (
+    "website/view/layout"
+    "website/view/about"
+)
 
 templ Index() {
     @layout.App(false) {
@@ -14,5 +17,6 @@ templ Index() {
             </div>
           </div>
         </div>
+        @about.Index()
     }
 }
