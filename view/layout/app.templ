@@ -1,8 +1,6 @@
 package layout
 
-import "website/view/component"
-
-templ App(nav bool) {
+templ App() {
     <!DOCTYPE html>
     	<html lang="en" data-theme="dark">
     		<head>
@@ -16,9 +14,6 @@ templ App(nav bool) {
     			<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
     		</head>
     		<body class="antialiased" hx-boost="true">
-    			if nav {
-    				@component.Navigation()
-    			}
     			{ children... }
     		</body>
     	</html>
