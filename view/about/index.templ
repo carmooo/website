@@ -1,41 +1,59 @@
 package about
 
 templ Index() {
-    <div id="about" class="section min-h-screen bg-gray-100 flex justify-center items-center">
-      <div class="max-w-6xl mx-auto grid grid-cols-2 gap-8">
-        <div class="col-span-1">
-          <div class="max-w-sm mx-auto">
-            <h2 class="text-4xl font-bold mb-4">About Me</h2>
-            <p class="text-lg mb-4">My name is João and I'm a fat software engineer. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempor justo eu metus fringilla, eget dapibus nisl ultrices.</p>
-            <div class="mb-4">
-              <p class="font-semibold mb-2">Connect with me:</p>
-              <ul class="flex">
-                <li class="mr-4"><a href="#" class="text-blue-500 hover:text-blue-700">Twitter</a></li>
-                <li class="mr-4"><a href="#" class="text-blue-500 hover:text-blue-700">LinkedIn</a></li>
-                <li><a href="#" class="text-blue-500 hover:text-blue-700">GitHub</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-span-1 overflow-y-auto">
-          <h2 class="text-3xl font-bold mb-4">Work Experience</h2>
-          <div class="max-h-full overflow-y-auto">
-            <div class="timeline-item mb-4">
-              <div class="timeline-dot bg-blue-500"></div>
-              <div class="timeline-content bg-gray-200 p-4">
-                <h3 class="text-lg font-semibold mb-2">Event 1</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempor justo eu metus fringilla.</p>
-              </div>
-            </div>
-            <div class="timeline-item mb-4">
-              <div class="timeline-dot bg-blue-500"></div>
-              <div class="timeline-content bg-gray-200 p-4">
-                <h3 class="text-lg font-semibold mb-2">Event 2</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempor justo eu metus fringilla.</p>
-              </div>
-            </div>
-          </div>
+<div id="about" class="section min-h-screen bg-gray-100 flex justify-center items-start lg:items-center px-4 py-8 lg:py-16">
+  <div class="max-w-6xl mx-auto flex flex-col lg:flex-row gap-8">
+    <div class="hero w-full lg:w-1/2 flex flex-col lg:flex-row">
+      <div class="hero-content">
+        <div class="max-w-md">
+          <h1 class="text-5xl font-bold">João Carmo</h1>
+          <p class="pt-6">I am a Software Engineer and I have had the privilege of building software for a big bank, a startup and a scaleup that was sold to a bigger, private company.</p>
+          <p class="pt-2">These days I am working on automating the training and deployment of machine learning models to extract fields from 100s of documents from all around the globe.</p>
+          <p class="pt-2 pb-6">When I am not at the computer I am usually reading, watching a movie or having dinner with friends.</p>
+          <button class="btn btn-primary">Get Started</button>
         </div>
       </div>
     </div>
+    <div class="w-full lg:w-1/2 overflow-y-auto">
+      <ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
+        <li>
+          <div class="timeline-middle">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+          </div>
+          <div class="timeline-start md:text-end mb-10">
+            <time class="font-mono italic">2020</time>
+            <div class="text-lg font-black">Santander</div>
+            This was my first work experience! I worked at a big bank mostly using Python. This included some Machine Learning too!
+          </div>
+          <hr/>
+        </li>
+        <li>
+          <hr />
+          <div class="timeline-middle">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+          </div>
+          <div class="timeline-end mb-10">
+            <time class="font-mono italic">2021</time>
+            <div class="text-lg font-black">Talkdesk</div>
+            This was my first experience at a startup and it was great. Very fast microservices environment and mostly worked with Kotlin and Ruby.
+          </div>
+          <hr />
+        </li>
+        <li>
+          <hr />
+          <div class="timeline-middle">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+          </div>
+          <div class="timeline-start md:text-end mb-10">
+            <time class="font-mono italic">2022</time>
+            <div class="text-lg font-black">Onfido</div>
+            Working on automatic field extractions for 100s of documents from all around the world at really high volumes. Right now I am mostly programming in Python and Ruby.
+          </div>
+          <hr />
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
 }
