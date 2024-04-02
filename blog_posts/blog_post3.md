@@ -1,3 +1,11 @@
++++
+title = "Other Stuff"
+description = "Lets check a bunch of other stuff!"
+category = "Tech"
+date = 2024-04-04
+author = "João Carmo"
+email = "joaorvcarmo@gmail.com"
++++
 # Markdown Example
 
 ## Heading 2

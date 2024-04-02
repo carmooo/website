@@ -1,3 +1,11 @@
++++
+title = "Code"
+description = "Lets check if code works!"
+category = "Tech"
+date = 2024-04-02
+author = "João Carmo"
+email = "joaorvcarmo@gmail.com"
++++
 ## Code
 
 Inline `code`
