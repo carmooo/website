@@ -1,0 +1,25 @@
+package blog
+
+import (
+    "io/fs"
+    "log"
+    "website/view/layout"
+)
+
+func getDateMod(entry fs.DirEntry) string {
+	fileInfo, err := entry.Info()
+	if err != nil {
+		log.Fatal(err)
+	}
+	return fileInfo.ModTime().Format("2006-01-02 15:04:05")
+}
+
+templ Index(files []fs.DirEntry) {
+    @layout.App() {
+        <ul class="menu bg-base-200 w-56 rounded-box">
+          for _, file := range files {
+                <li><a>{file.Name()}, {getDateMod(file)}</a></li>
+          }
+        </ul>
+    }
+}
