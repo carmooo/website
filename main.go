@@ -24,6 +24,7 @@ func main() {
 	router.Handle("/*", http.StripPrefix("/", http.FileServer(http.FS(FS))))
 	router.Get("/", handler.MakeHandler(handler.HandleLandingIndex))
 	router.Get("/blog", handler.MakeHandler(handler.HandleBlogIndex))
+	router.Get("/blog_post/{postName}", handler.MakeHandler(handler.HandleBlogPost))
 
 	http_base_url := os.Getenv("HTTP_BASE_URL")
 	slog.Info("Application running at", "url", http_base_url)

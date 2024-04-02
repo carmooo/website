@@ -1,0 +1,9 @@
+package blog
+
+import "website/view/layout"
+
+templ BlogPost(postHtml []byte) {
+    @layout.App() {
+        @templ.Raw(string(postHtml))
+    }
+}
