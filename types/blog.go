@@ -10,4 +10,5 @@ type PostInfo struct {
 	Author      string    `toml:"author"`
 	Email       string    `toml:"email"`
 	FileName    string
+	Content     []byte
 }

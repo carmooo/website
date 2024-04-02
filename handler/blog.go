@@ -73,9 +73,8 @@ func HandleBlogPost(w http.ResponseWriter, r *http.Request) error {
 		log.Fatal(err)
 	}
 
-	// This is just to remove the frontmatter before going ahead and converting to HTML
-	var emptyStruct struct{}
-	md, err = frontmatter.MustParse(bytes.NewReader(md), &emptyStruct)
+	var postInfo types.PostInfo
+	md, err = frontmatter.MustParse(bytes.NewReader(md), &postInfo)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -90,6 +89,7 @@ func HandleBlogPost(w http.ResponseWriter, r *http.Request) error {
 	}
 	renderer := html.NewRenderer(opts)
 	html := markdown.Render(doc, renderer)
+	postInfo.Content = html
 
-	return blog.BlogPost(html).Render(r.Context(), w)
+	return blog.BlogPost(postInfo).Render(r.Context(), w)
 }
